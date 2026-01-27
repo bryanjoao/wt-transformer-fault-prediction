@@ -4,7 +4,7 @@ if __name__ == '__main__':
     # Split the training set for each wind turbine
     data = pd.read_pickle('./data/train/WT_2019.pkl')
 
-    wt_names_list = ['WT2', 'WT3', 'WT4', 'WT5', 'WT6', 'WT7', 'WT9', 'MF12', 'MF13']
+    wt_names_list = ['WT1', 'WT2', 'WT3', 'WT4', 'WT5', 'WT6', 'WT7', 'WT8', 'WT9']
 
     for wt_name in wt_names_list:
         wt_dataframe = data.filter(like=wt_name)
@@ -14,7 +14,7 @@ if __name__ == '__main__':
     # Split the test set for each wind turbine
     data = pd.read_pickle('./data/test/WT_2022.pkl')
 
-    wt_names_list = ['WT2', 'WT3', 'WT4', 'WT5', 'WT6', 'WT7', 'WT9', 'WT8', 'WT9']
+    wt_names_list = ['WT1', 'WT2', 'WT3', 'WT4', 'WT5', 'WT6', 'WT7', 'WT8', 'WT9']
 
     for wt_name in wt_names_list:
         wt_dataframe = data.filter(like=wt_name)
