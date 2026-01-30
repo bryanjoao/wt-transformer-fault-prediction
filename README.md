@@ -57,23 +57,16 @@ This README assumes the repository follows a typical structure. If your repo dif
 
 - README.md
 - requirements.txt
-- src/
-  - src/train.py
-  - src/evaluate.py
-  - src/infer.py
-  - src/models/transformer.py
-  - src/data/preprocess.py
-  - src/utils.py
-- configs/
-  - configs/forecasting.yaml
-- data/
-  - data/raw/
-  - data/processed/
-- models/
-  - models/checkpoints/
-- results/
-  - results/metrics/
-  - results/figures/
+- **`Src/`** - Source code for data and modeling operations
+  - **`data/`** - Data loading and preprocessing functions 
+    - loader.py
+    - preprocessing.py
+  - **`model`** - Model definition and evaluation functions
+    - transformer_full.py
+    - evaluation.py
+- **`Notebooks`** - Pre-training, fine tuning and inference notebooks per turbine
+- **`Models`** - Model artifacts per turbine
+- **`Plots`** - Residual plots and failure detection
 
 ---
 
@@ -90,7 +83,6 @@ Expected input:
 ```bash
 git clone https://github.com/bryanjoao/wt-transformer-fault-prediction.git
 cd wt-transformer-fault-prediction
-git checkout 08ac588f1b4e87fe0d7557e1979a387250c3ee29
 ```
 
 2) Create environment & install dependencies
